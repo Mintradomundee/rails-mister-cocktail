@@ -1,0 +1,38 @@
+.card {
+ height: 250px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 50px 5px;
+  display: inline-flex;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.card-description {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.name {
+  font-size: 15px;
+  a{
+   text-decoration: none;
+   color: white;
+   &:hover {
+    font-size: 20px;
+    text-transform: uppercase;
+   }
+  }
+}
+
+.cocktail-card {
+  display: flex;
+  justify-content: center;
+}
+

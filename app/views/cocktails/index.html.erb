@@ -1,7 +1,16 @@
-<h2>Your cocktail selection: </h2>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
-<%= link_to 'Add a cocktail', new_cocktail_path %>
+<div class="container text-center pad">
+    <div class="cocktail-card">
+      <% @cocktails.each do |cocktail| %>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo.key, crop: :fill %>')">
+              <div class="card-description">
+                <p class="card-link name"><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
+</div>
